@@ -1,7 +1,8 @@
 /** BACKGROUND*/
 section#about {
   background: var(--bg-second);
-  height: 35.31rem;
+  height: auto;
+  transition: ease var(--change-theme-delay);
 }
 @media (max-width: 720px) {
   section#about {
@@ -19,6 +20,17 @@ section#about > .container {
   align-items: center;
   column-gap: 15%;
   height: 22.93rem;
+  padding: 6.18rem 0;
+}
+@media (max-width: 1280px) {
+  section#about > .container {
+    column-gap: 10%;
+  }
+}
+@media (max-width: 880px) {
+  section#about > .container {
+    column-gap: 5%;
+  }
 }
 @media (max-width: 720px) {
   section#about > .container {
@@ -40,7 +52,8 @@ section#about > .container .about-me {
 }
 @media (max-width: 720px) {
   section#about > .container .about-me {
- 
+    justify-content: initial;
+    row-gap: 2rem;
   }
 }
 section#about > .container .about-me h2 {

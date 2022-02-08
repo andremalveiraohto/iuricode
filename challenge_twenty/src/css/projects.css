@@ -1,0 +1,101 @@
+/** BACKGROUND*/
+section#projects {
+  background: var(--bg-second);
+  display: flex;
+  transition: ease var(--change-theme-delay);
+  height: auto;
+}
+@media (max-width: 720px) {
+
+}
+
+section#projects > .container {
+  padding: 6rem 0;
+  row-gap: 3.75rem;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 1280px) {
+  section#projects > .container {
+    padding: 6rem 4rem;
+  }
+}
+@media (max-width: 720px) {
+  section#projects > .container {
+    padding: 6rem 2rem;
+  }
+}
+section#projects > .container h2 {
+  text-transform: uppercase;
+}
+
+
+section#projects .projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.25rem;
+  row-gap: 5rem;
+}
+@media (max-width: 1280px) {
+  section#projects .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px) {
+  section#projects .projects .card {
+    width: 100%;
+  }
+}
+@media (max-width: 570px) {
+  section#projects .projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+section#projects .projects .project {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2.5rem;
+  grid-row: span 1;
+  padding: 1rem;
+  transition: ease var(--change-theme-delay);
+}
+section#projects .projects .project:hover {
+  box-shadow: 0px 0px 0px 1px var(--pink);
+  border-radius: 0.6rem;
+
+}
+section#projects .projects .project:hover .card::before {
+  background-color: var(--pink);
+}
+section#projects .projects .project .info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+section#projects .projects .project .info .title {
+  font-size: 1.5rem;
+}
+section#projects .projects .project:hover .info .title {
+  color: var(--purple);
+  transition: ease var(--change-theme-delay);
+}
+section#projects .projects .project .info p {
+  color: var(--font-second);
+}
+section#projects .projects .project .info .langs {
+  display: flex;
+  column-gap: 0.5rem;
+}
+section#projects .projects .project .info .langs span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.1rem 0.7rem;
+  border-radius: 25rem;
+  background-color: var(--bg-primary);
+  font-size: 0.75rem;
+  color: var(--cyan);
+  box-shadow: 0px 0px 0px 1px #333;
+  column-gap: 0.3rem;
+  user-select: none;
+}

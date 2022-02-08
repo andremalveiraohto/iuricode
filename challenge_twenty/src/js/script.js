@@ -1,13 +1,57 @@
+//LOADING
+document.body.insertAdjacentHTML('beforeend', `
+  <div id="loading">
+    <svg class="spinner" viewBox="0 0 50 50">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="3"></circle>
+    </svg>
+  </div>
+`)
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    loading.remove()
+    app.removeAttribute('style')
+  }, 300);
+
+})
+
+
+
+
 //HEADER Scroll Fixed
 document.addEventListener('scroll', e => {
-
   if(window.scrollY > 80) {
     Header.classList.add('fixed')
   } else {
     Header.classList.remove('fixed')
   }
-  
 })
+
+
+
+
+//THEME Toggle
+let HTML = document.documentElement, isToggle = false;
+let theme = {
+  light: () => {
+    HTML.setAttribute('theme', 'light')
+    localStorage.setItem('theme', 'light')
+    isToggle = true
+  }, 
+  dark: () => {
+    HTML.setAttribute('theme', 'dark')
+    localStorage.setItem('theme', 'dark')
+    isToggle = false
+  }
+}
+if(localStorage.getItem('theme') == 'light') {
+  theme.light() 
+}
+IconYinYang.addEventListener('click', () => {
+  if(!isToggle) theme.light() 
+  else theme.dark()
+})
+
+
 
 
 //MENU Mobile
@@ -20,34 +64,36 @@ IconList.addEventListener('click', () => {
     NavMenu.classList.remove('show')
     menuVisible = false
   }
-
 })
+
+
 
 
 //Experience TABS
 //const ExperienceTabs = document.querySelector('#ExperienceTabs')
-const tabs = ExperienceTabs.querySelectorAll('nav .tabs .tab')
-
-tabs.forEach(e => {
-
-  e.addEventListener('click', () => {
-
-    ExperienceTabs.querySelector('nav .tabs .tab.active').classList.remove('active')
-    e.classList.add('active')
-
-    let tabId = e.attributes.tab.value
-    let TabSelected = ExperienceTabs.querySelector(`.contents #${tabId}`)
-
-    ExperienceTabs.querySelector(`.contents .content.active`).classList.add('hide')
- 
-    setTimeout(() => {
-      ExperienceTabs.querySelector(`.contents .content.active`).classList.remove('active')
-      if(TabSelected.classList.contains('hide')){
-        TabSelected.classList.remove('hide')
-      }
-
-      ExperienceTabs.querySelector(`.contents #${tabId}`).classList.add('active')
-    }, 200);
-
+const initExperienceTabs = () => {
+  const tabs = ExperienceTabs.querySelectorAll('nav .tabs .tab')
+  tabs.forEach(e => {
+    let initial = 'active', final = 'hide';
+  
+    e.addEventListener('click', () => {
+      ExperienceTabs.querySelector(`nav .tabs .tab.${initial}`).classList.remove(initial)
+      e.classList.add(initial)
+  
+      let tabId = e.attributes.tab.value
+      let TabSelected = ExperienceTabs.querySelector(`.contents #${tabId}`)
+  
+      ExperienceTabs.querySelector(`.contents .content.${initial}`).classList.add(final)
+   
+      setTimeout(() => {
+        ExperienceTabs.querySelector(`.contents .content.${initial}`).classList.remove(initial)
+        if(TabSelected.classList.contains(final)){
+          TabSelected.classList.remove(final)
+        }
+  
+        ExperienceTabs.querySelector(`.contents #${tabId}`).classList.add(initial)
+      }, 200);
+  
+    })
   })
-})
+}

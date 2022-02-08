@@ -1,0 +1,49 @@
+{
+  "name":"André Malveira",
+  "username":"andremalveira",
+  "location":"Pará, Brazil",
+  "userimage":"src/images/aiohto.jpg",
+  "description":"A guy who loves technology, loves the world of development and games, every day learning a little more about programming.",
+  "stack":"Front End Developer",
+  "socials": {
+    "github":"https://github.com/andremalveira",
+    "linkedin":"https://www.linkedin.com/in/andremalveira/",
+    "youtube":"https://youtube.com/andremallveira",
+    "codepen":"https://codepen.io/andremalveira",
+    "facebook":"https://facebook.com/c.andremalveira",
+    "email": "mailto:andremalveira.dev@gmail.com",
+    "curriculum": null
+  }, 
+  "experiences": [
+    {
+      "role":"Front End Developer",
+      "description":"Development of a library with useful resources for personal use in projects with Javascript. ",
+      "company":"Personal Project",
+      "date":"NOV 2021"
+    },
+    {
+      "role":"Front End Developer 2",
+      "description":"Development of a library with useful resources for personal use in projects with Javascript. ",
+      "company":"Personal Project",
+      "date":"DEZ 2021"
+    }
+  ],
+  "projects":[
+    {
+      "name":"Astronaut Library.js",
+      "description":"Astronaut Library.js is a small Library Javascript with useful resources for Developers.",
+      "langsUsed":["JavaScript"],
+      "url":"https://astlibjs.ga",
+      "repo":"https://github.com/andremalveira/Astronaut.Library.js",
+      "image":"https://astlibjs.ga/src/img/png/banner.png"
+    },
+    {
+      "name":"API structure in PHP",
+      "description":"Example API structure in PHP - MVC with Firebase Database for deployment in Vercel.",
+      "langsUsed":["PHP"],
+      "url":null,
+      "repo":"https://github.com/andremalveira/api-php-mvc-firebase-vercel",
+      "image":"https://raw.githubusercontent.com/andremalveira/api-php-mvc-firebase-vercel/main/public/head.png"
+    }
+  ]
+}

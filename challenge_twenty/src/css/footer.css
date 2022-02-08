@@ -1,0 +1,26 @@
+/** BACKGROUND*/
+section#footer {
+  background: var(--bg-primary);
+  height: 6.25rem;
+  transition: ease var(--change-theme-delay);
+}
+@media (max-width: 720px) {
+  section#footer {
+    height: 4.25rem;
+  }
+}
+
+section#footer > .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  color: var(--font-second);
+}
+@media (max-width: 380px) {
+  section#footer > .container {
+    flex-direction: column;
+    padding: 1.5rem 0.5rem;
+    justify-content: space-around;
+  }
+}

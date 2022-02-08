@@ -4,6 +4,7 @@ section#experience {
   height: 35.31rem;
   display: flex;
   overflow: hidden;
+  transition: ease var(--change-theme-delay);
 }
 @media (max-width: 720px) {
   section#experience {
@@ -17,9 +18,9 @@ section#experience > .container{
 }
 @media (max-width: 720px) {
   section#experience > .container{
-    padding-top: 5rem;
     height: 80vh;
     padding: 0 ;
+    padding-top: 5rem;
   }
 }
 
@@ -98,7 +99,6 @@ section#experience > .container .tabs .tab {
   section#experience > .container .tabs .tab {
     min-width: 10rem;
   }
-
 }
 section#experience > .container .tabs .tab:hover,
 section#experience > .container .tabs .tab.active {
@@ -141,6 +141,7 @@ section#experience > .container .content {
 @media (max-width: 720px) {
   section#experience > .container .content {
     padding: 0 2rem ;
+    transform: translateX(200px);
   }
 }
 section#experience > .container .content.active {
@@ -159,6 +160,19 @@ section#experience > .container .content.active {
     opacity: 1;
   }
 }
+@media (max-width: 720px) {
+  @keyframes tabshow {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+}
+
 section#experience > .container .content.hide {
   transform: translateX(200px);
   opacity: 0;
@@ -172,6 +186,23 @@ section#experience > .container .content.hide {
   100% {
     transform: translateX(100px);
     opacity: 0;
+  }
+}
+@media (max-width: 720px) {
+  section#experience > .container .content.hide {
+    transform: translateX(-200px);
+    opacity: 0;
+    animation: tabhide 0.2s;
+  }
+  @keyframes tabhide {
+    0% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(-100px);
+      opacity: 0;
+    }
   }
 }
 
