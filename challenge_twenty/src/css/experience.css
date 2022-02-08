@@ -98,9 +98,9 @@ section#experience > .container .tabs .tab.active::before {
 section#experience > .container .tabs .tab:hover::before,
 section#experience > .container .tabs .tab.active::before {
   background: var(--cyan);
-  animation: hovermenu 0.2s ;
+  animation: hovertab 0.2s ;
 }
-@keyframes hovermenu {
+@keyframes hovertab {
   0% {
     height: 0%;
   }

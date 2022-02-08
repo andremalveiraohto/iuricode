@@ -1,3 +1,14 @@
+//HEADER Scroll Fixed
+document.addEventListener('scroll', e => {
+
+  if(window.scrollY > 80) {
+    Header.classList.add('fixed')
+  } else {
+    Header.classList.remove('fixed')
+  }
+  
+})
+
 
 //MENU Mobile
 let menuVisible = false

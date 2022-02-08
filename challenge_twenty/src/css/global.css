@@ -33,12 +33,16 @@
   border-radius: 0.5rem;
   background-color: var(--purple);
 }
+html {
+  scroll-behavior: smooth;
+}
 @media (max-width: 1080px) {
   html {font-size: 93.75%}
 }
 @media (max-width: 720px) {
   html {font-size: 87.5%}
 }
+
 body {
   width: 100%;
   box-sizing: border-box;
@@ -49,7 +53,6 @@ body {
 }
 
 body > #app {
-  overflow: overlay;
   height: 100%;
 }
 
@@ -155,7 +158,7 @@ body > #app .card {
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1;
+  z-index: 0;
 }
 @media (max-width: 720px) {
   body > #app .card {

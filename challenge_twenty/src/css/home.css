@@ -32,14 +32,37 @@ section#home .background {
 
 /** HEADER*/
 header {
+  position: fixed;
+  width: 100%;
+}
+header.fixed {
+  background: var(--bg-primary);
+  z-index: 1;
+}
+header > .container {
+
   width: 100%;
   height: 6.81rem;
+  max-width: 70vw;
+  margin: auto;
   position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: ease 0.2s;
 }
-header::after {
+header.fixed > .container {
+  height: 2.81rem;
+}
+@media (max-width: 720px) {
+  header > .container {
+    max-width: initial;
+    padding: 0 2rem;
+    height: 100%;
+    width: auto;
+  }
+}
+header > .container::after {
   content: '';
   position: absolute;
   bottom: 0;
@@ -47,19 +70,19 @@ header::after {
   width: 100%;
   height: 0.1rem;
 }
-header h3 {
+header > .container h3 {
   color: var(--cyan);
   font-size: 1.5rem;
 }
 
-header nav {
+header > .container nav {
   display: flex;
   gap: 1rem;
   align-items: center;
   height: 100%;
   color: var(--font-second);
 }
-header nav a {
+header > .container nav a {
   position: relative;
   display: flex;
   align-items: center;
@@ -71,17 +94,17 @@ header nav a {
 
 }
 
-header nav a:hover::after {
+header > .container nav a:hover::after {
   content: '';
   position: absolute;
   bottom: 0;
   background: var(--cyan);
   width: 100%;
-  height: 0.1rem;
+  height: 0.2rem;
   border-radius: 0.3rem;
   animation: hovermenu 0.2s ;
 }
-header #IconList {
+header > .container #IconList {
   display: none;
 }
 @keyframes hovermenu {
@@ -94,10 +117,10 @@ header #IconList {
 }
 
 @media (max-width: 720px) {
-  header { 
+  header > .container { 
     height: 5.81rem;
   }
-  header nav {
+  header > .container nav {
     font-size: 0.8rem;
     transform: translateY(-300%);
     opacity: 0;
@@ -114,28 +137,32 @@ header #IconList {
     height: auto;
     border-radius: 0.3rem;
   }
-  header nav.show {
+  header > .container nav.show {
     transform: translateY(30%);
     opacity: 1;
+    box-shadow: 0px 5px 2px 0px #0000001a;
   }
-  header nav a {
+  header.fixed > .container nav.show {
+    transform: translateY(95%);
+  }
+  header > .container nav a {
     width: 100%;
     height: 2rem;
     padding: 0;
   }
 
-  header #IconList {
+  header > .container #IconList {
     display: flex;
     color: var(--pink);
   }
-  header #IconList svg {
+  header > .container #IconList svg {
     width: 1.5rem;
     height: 1.5rem;
     padding: 0.3rem;
     border-radius: 50%;
     transition: ease 0.2s;
   }
-  header #IconList svg:active { 
+  header > .container #IconList svg:active { 
     background: #ffffff15;
   }
 }
