@@ -1,0 +1,173 @@
+/** BACKGROUND*/
+section#home {
+  position: relative;
+  z-index: 1;
+}
+section#home .background {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  z-index: -1;
+}
+@media (max-width: 720px) {
+  section#home .background {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    z-index: -1;
+    opacity: 0.5;
+  }
+  section#home .background svg {
+    width: 642px;
+    height: 425px;
+  }
+}
+
+
+/** HEADER*/
+header {
+  width: 100%;
+  height: 6.81rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background: var(--bg-second);
+  width: 100%;
+  height: 0.1rem;
+}
+header h3 {
+  color: var(--cyan);
+  font-size: 1.5rem;
+}
+
+header nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  height: 100%;
+  color: var(--font-second);
+}
+header nav a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 0 1.5rem;
+  transition: ease 0.2s;
+  border-bottom: solid 2px transparent;
+
+}
+
+header nav a:hover::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background: var(--cyan);
+  width: 100%;
+  height: 0.1rem;
+  border-radius: 0.3rem;
+  animation: hovermenu 0.2s ;
+}
+header #IconList {
+  display: none;
+}
+@keyframes hovermenu {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@media (max-width: 720px) {
+  header { 
+    height: 5.81rem;
+  }
+  header nav {
+    font-size: 0.8rem;
+    transform: translateY(-300%);
+    opacity: 0;
+    transition: ease 0.2s;
+    display: flex;
+    position: absolute;
+    align-items: flex-start;
+    left: 0;
+    bottom: 0;
+    background: var(--bg-second);
+    z-index: 99;
+   /*  width: calc(50% - 4rem); */
+    width: 100%;
+    height: auto;
+    border-radius: 0.3rem;
+  }
+  header nav.show {
+    transform: translateY(30%);
+    opacity: 1;
+  }
+  header nav a {
+    width: 100%;
+    height: 2rem;
+    padding: 0;
+  }
+
+  header #IconList {
+    display: flex;
+    color: var(--pink);
+  }
+  header #IconList svg {
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.3rem;
+    border-radius: 50%;
+    transition: ease 0.2s;
+  }
+  header #IconList svg:active { 
+    background: #ffffff15;
+  }
+}
+
+/** MAIN*/
+main {
+  height: calc(100vh - 6.81rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+main > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 3.5rem;
+  margin-top: -6.81rem;
+}
+main .text {
+  display: flex;
+  flex-direction: column;
+}
+main .text h1 {
+  color: var(--cyan);
+  font-size: 4rem;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  font-weight: 500;
+}
+main .text h2 {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+

@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&display=swap');
+
+:root {
+  --bg-primary: #121212;
+  --bg-second: #151515;
+  
+  --font-primary: #FFFFFF;
+  --font-second: #C4C4C4;
+
+  --cyan: #00D2DF;
+  --pink: #fd4299;
+  --purple: #9358F7;
+
+  --gradient-pink: linear-gradient(141deg, #D24074 1%, #6518B4 100%);
+  --gradient-purple: linear-gradient(141deg, #9358F7 1%, #10D7E2 100%);
+}
+[theme="light"] {
+  --bg-primary: #FFFFFF;
+  --bg-second: #C4C4C4;
+
+  --font-primary: #121212;
+  --font-second: #151515;
+}
+*::selection {
+  background: #D24074;
+  color: var(--bg-second);
+}
+*::-webkit-scrollbar {
+  width: 0.4rem;
+  background-color: #0000002c;
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  background-color: var(--purple);
+}
+@media (max-width: 1080px) {
+  html {font-size: 93.75%}
+}
+@media (max-width: 720px) {
+  html {font-size: 87.5%}
+}
+body {
+  width: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+  color: var(--font-primary);
+  background: var(--bg-primary);
+}
+
+body > #app {
+  overflow: overlay;
+  height: 100%;
+}
+
+section {
+  height: 100vh;
+}
+
+section > .container {
+  max-width: 70vw;
+  margin: auto;
+  height: 100%;
+  width: 100%;
+}
+@media (max-width: 720px) {
+  section > .container {
+    max-width: initial;
+    padding: 0 2rem;
+    height: 100%;
+    width: auto;
+  }
+}
+
+
+/* @warn RESET's*/
+
+a {
+  text-decoration: none;
+  color: currentColor;
+  outline: none;
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+  margin: 0;
+}
+h2 {
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+p {
+  margin: 0;
+}
+
+/* @warn BTN'S*/
+body > #app .btns {
+  display: flex;
+  column-gap: 2rem;
+  flex-wrap: wrap;
+}
+body > #app .btns .btn {
+  max-width: 10rem;
+  height: 2.81rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  transition: ease 0.2s;
+  flex: 1;
+}
+body > #app .btns .btn:hover {
+  transform: translateY(-0.5rem);
+}
+body > #app .btns .btn::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+  border-radius:4px; 
+  border: 2px solid transparent; 
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor; 
+  mask-composite: exclude;
+}
+body > #app .btns .btn.gradient-pink::after {
+  background: var(--gradient-pink) border-box; 
+}
+body > #app .btns .btn.gradient-purple::after {
+  background: var(--gradient-purple) border-box; 
+}
+body > #app .btns .btn i {
+  display: flex;
+  align-items: center;
+}
+
+/* @warn CARD/IMAGE/SQUARE*/
+
+body > #app .card {
+  position: relative;
+  min-width: auto;
+  min-height: auto;
+  max-width: 22.93rem;
+  max-height: 22.93rem;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  box-shadow: 0px 0px 10px 3px #0000002c;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+@media (max-width: 720px) {
+  body > #app .card {
+    width: 16.93rem;
+    height: 16.93rem;
+  }
+}
+body > #app .card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 0.35rem;
+  background-color: var(--cyan);
+}
+body > #app .card::after {
+  content: 'IMAGE';
+  position: absolute;
+  color: var(--cyan);
+  font-weight: 500;
+  font-size: 2rem;
+  z-index: -1;
+}
+body > #app .card img {
+  width: 100%;
+}
+
+
+
+/* border: double 2px transparent;
+border-radius: 4px;
+background-origin: border-box;
+background-clip: content-box, border-box; */
+/* body > #app .btns .btn.gradient-pink {
+  background-image: linear-gradient(#121212, #121212), var(--gradient-pink); 
+}
+body > #app .btns .btn.gradient-purple {
+  background-image: linear-gradient(#121212, #121212), var(--gradient-purple); 
+} */

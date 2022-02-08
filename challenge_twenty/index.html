@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Futuristic - Home </title>
+
+  <link rel="shortcut icon" href="src/images/aiohto.jpg" type="image/x-icon">
+
+  <link rel="stylesheet" href="src/css/global.css">
+  <link rel="stylesheet" href="src/css/home.css">
+  <link rel="stylesheet" href="src/css/about.css">
+  <link rel="stylesheet" href="src/css/experience.css">
+</head>
+<body>
+  <div id="app">
+
+    <!--- HOME -->
+    <section id="home">
+      <div class="container">
+        <header>
+          <h3>Futuristic</h3>
+          <nav id="NavMenu">
+            <a href="#home">Home</a>
+            <a href="#about">About me</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+          </nav>
+          <div id="IconList"></div>
+        </header>
+        <main>
+          <div class="container">
+            <div class="text">
+              <h2>Hi, I'm</h2>
+              <h1>André Malveira</h1>
+              <h2>Front End Developer</h2>
+            </div>  
+            <div class="btns">
+              <div class="btn gradient-purple"><i id="IconLinkedIn" size="19"></i>LinkedIn</div>
+              <div class="btn gradient-pink"><i id="IconGitHub" size="19"></i>GitHub</div>
+            </div>
+          </div>
+        </main>
+      </div>
+      <div class="background" id="PolygonBg"></div>
+    </section>
+
+    <!--- ABOUT -->
+    <section id="about">
+      <div class="container">
+        <div class="card">
+          <img src="src/images/aiohto.jpg" alt="">
+        </div>
+        <div class="about-me">
+          <h2>About Me</h2>
+          <div class="text">
+            <h3>Pará, Brasil</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id egestas dui. Nullam finibus aliquam enim quis faucibus. Aenean ac commodo dolor, nec bibendum velit.</p>
+          </div>
+          <div class="social">
+            <i icon id="IconYoutube" size="24" href="https://youtube.com/andremallveira"></i>
+            <i icon id="IconCodePen" size="24" href="https://codepen.io/andremalveira"></i>
+            <i icon id="IconFacebook" size="24" href="https://facebook.com/c.andremalveira"></i>
+          </div>
+          <div class="btns">
+            <div class="btn gradient-purple"><i id="IconDownload" size="22"></i>Curriculum</div>
+            <div class="btn gradient-pink"><i id="IconEmail" size="19"></i>E-mail</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--- EXPERIENCE -->
+    <section id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <div id="ExperienceTabs" class="table">
+          <nav>
+            <div id="Tabs" class="tabs">
+              <div tab="tab1" class="tab active">Personal Projects</div>
+              <div tab="tab2" class="tab">Personal Projects</div>
+              <div tab="tab2" class="tab">Personal Projects</div>
+              <div tab="tab2" class="tab">Personal Projects</div>
+            </div>
+          </nav>
+          <div class="contents">
+            <div id="tab1" class="content active">
+              <div class="header"><h2>Title</h2><div class="date">FEV 2022</div></div>
+              <div class="company">Personal Projects</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.</p>
+            </div>
+            <div id="tab2" class="content">
+              <div class="header"><h2>Title 2</h2><div class="date">JAN 2022</div></div>
+              <div class="company">Personal Projects 2</div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eu purus risus. Ut rutrum sollicitudin purus in accumsan. Proin at mattis metus. Nullam sit amet mauris condimentum, volutpat augue in, mattis urna.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+</body>
+
+<script src="src/js/icons.svg.js"></script>
+<script src="src/js/polygon.svg.js"></script>
+
+<script src="src/js/script.js"></script>
+</html>
+
