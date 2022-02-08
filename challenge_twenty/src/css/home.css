@@ -34,13 +34,12 @@ section#home .background {
 header {
   position: fixed;
   width: 100%;
+  background: var(--bg-primary);
 }
 header.fixed {
-  background: var(--bg-primary);
   z-index: 1;
 }
 header > .container {
-
   width: 100%;
   height: 6.81rem;
   max-width: 70vw;
@@ -121,7 +120,7 @@ header > .container #IconList {
     height: 5.81rem;
   }
   header > .container nav {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     transform: translateY(-300%);
     opacity: 0;
     transition: ease 0.2s;
@@ -156,8 +155,8 @@ header > .container #IconList {
     color: var(--pink);
   }
   header > .container #IconList svg {
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
     padding: 0.3rem;
     border-radius: 50%;
     transition: ease 0.2s;

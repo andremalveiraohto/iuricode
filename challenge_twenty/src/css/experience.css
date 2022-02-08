@@ -17,7 +17,9 @@ section#experience > .container{
 }
 @media (max-width: 720px) {
   section#experience > .container{
+    padding-top: 5rem;
     height: 80vh;
+    padding: 0 ;
   }
 }
 
@@ -30,6 +32,9 @@ section#experience > .container nav {
 @media (max-width: 720px) {
   section#experience > .container nav {
     overflow: overlay;
+    height: 3.43rem;
+    position: relative;
+    padding-left:2rem ;
   }
   section#experience > .container nav::-webkit-scrollbar {
     height: 0;
@@ -39,6 +44,11 @@ section#experience > .container nav {
 section#experience > .container > h2 {
   text-transform: uppercase;
   margin-bottom: 1.62rem;
+}
+@media (max-width: 720px) {
+  section#experience > .container > h2 {
+    padding: 0 2rem ;
+  }
 }
 section#experience > .container .table { 
   display: grid;
@@ -60,6 +70,16 @@ section#experience > .container .table {
   section#experience > .container .tabs  {
     display: flex;
     column-gap: 0.5rem;
+    position: relative;
+    width: max-content;
+  }
+  section#experience > .container .tabs::after  {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    height: 0.1rem;
+    background-color: var(--bg-second);
+    width: 100%;
   }
 }
 section#experience > .container .tabs .tab {
@@ -117,6 +137,11 @@ section#experience > .container .content {
   transition: ease 0.2s;
   transform: translateX(-100px);
   opacity: 0;
+}
+@media (max-width: 720px) {
+  section#experience > .container .content {
+    padding: 0 2rem ;
+  }
 }
 section#experience > .container .content.active {
   display: flex;
