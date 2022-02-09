@@ -3,7 +3,8 @@
 :root {
   --bg-primary: #121212;
   --bg-second: #151515;
-  
+  --bg-third: #1d1d1d;
+
   --font-primary: #FFFFFF;
   --font-second: #C4C4C4;
 
@@ -20,10 +21,11 @@
 }
 [theme="light"] {
   --bg-primary: #FFFFFF;
-  --bg-second: #C4C4C4;
+  --bg-second: #e8feff;
+  --bg-third: #f4e4fe;
 
-  --font-primary: #121212;
-  --font-second: #151515;
+  --font-primary: #829cfe;
+  --font-second: #b38bfa;
 
   --border: #222;
 }
@@ -101,6 +103,7 @@ a {
 h1, h2, h3, h4, h5 {
   font-weight: normal;
   margin: 0;
+  transition: ease var(--change-theme-delay);
 }
 h2 {
   font-weight: 500;
@@ -108,6 +111,7 @@ h2 {
 }
 p {
   margin: 0;
+  transition: ease var(--change-theme-delay);
 }
 
 /* @warn BTN'S*/
@@ -174,8 +178,8 @@ body > #app .card {
   min-height: auto;
   max-width: 22.93rem;
   max-height: 22.93rem;
-/*   width: 100%;
-  height: 100%; */
+/*   width: 100%;*/
+  height: 100%;
   margin: auto;
   border-radius: 0.3rem;
   overflow: hidden;

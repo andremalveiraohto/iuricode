@@ -36,17 +36,21 @@ let theme = {
     HTML.setAttribute('theme', 'light')
     localStorage.setItem('theme', 'light')
     isToggle = true
+    toggleTheme.classList.add('active')
+    toggleThemeText.textContent = 'Dark'
   }, 
   dark: () => {
     HTML.setAttribute('theme', 'dark')
     localStorage.setItem('theme', 'dark')
     isToggle = false
+    toggleTheme.classList.remove('active')
+    toggleThemeText.textContent = 'Light'
   }
 }
 if(localStorage.getItem('theme') == 'light') {
   theme.light() 
 }
-IconYinYang.addEventListener('click', () => {
+toggleTheme.addEventListener('click', () => {
   if(!isToggle) theme.light() 
   else theme.dark()
 })

@@ -2,7 +2,7 @@
   "name":"André Malveira",
   "username":"andremalveira",
   "location":"Pará, Brazil",
-  "userimage":"src/images/aiohto.jpg",
+  "userimage":"src/images/aiohto.kawai.jpg",
   "description":"A guy who loves technology, loves the world of development and games, every day learning a little more about programming.",
   "stack":"Front End Developer",
   "socials": {
@@ -15,18 +15,7 @@
     "curriculum": null
   }, 
   "experiences": [
-    {
-      "role":"Front End Developer",
-      "description":"Development of a library with useful resources for personal use in projects with Javascript. ",
-      "company":"Personal Project",
-      "date":"NOV 2021"
-    },
-    {
-      "role":"Front End Developer 2",
-      "description":"Development of a library with useful resources for personal use in projects with Javascript. ",
-      "company":"Personal Project",
-      "date":"DEZ 2021"
-    }
+    
   ],
   "projects":[
     {

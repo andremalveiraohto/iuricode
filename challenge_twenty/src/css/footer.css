@@ -6,7 +6,7 @@ section#footer {
 }
 @media (max-width: 720px) {
   section#footer {
-    height: 4.25rem;
+    height: 3.25rem;
   }
 }
 
@@ -20,7 +20,10 @@ section#footer > .container {
 @media (max-width: 380px) {
   section#footer > .container {
     flex-direction: column;
-    padding: 1.5rem 0.5rem;
+    padding: 1rem 0.5rem;
     justify-content: space-around;
   }
+}
+section#footer > .container .right {
+  opacity: 0.6;
 }

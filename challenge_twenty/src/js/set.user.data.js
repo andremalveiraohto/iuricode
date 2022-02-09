@@ -56,7 +56,7 @@ const setHome = () => {
     </main>
   `
   home.querySelector('#main').innerHTML = Container()
-
+  NavMenu.querySelector('a[href="#home"]').style.display = 'flex'
   svg('IconLinkedIn', icon.LinkedIn)
   svg('IconGitHub', icon.GitHub)
 }
@@ -102,7 +102,7 @@ const setAbout = () => {
     </div>
   `
   about.innerHTML = Container()
-
+  NavMenu.querySelector('a[href="#about"]').style.display = 'flex'
   svg('IconEmail', icon.Email)
   svg('IconDownload', icon.Download)
   svg('IconYoutube', icon.Youtube)
@@ -114,13 +114,18 @@ const setAbout = () => {
 //EXPERIENCE
 const setExperience = () => {
   let Container = (tabs, contents) => `
-    <nav>
-      <div id="Tabs" class="tabs">
-        ${tabs}
+    <div class="container">
+      <h2>Experience</h2>
+      <div id="ExperienceTabs" class="table">
+        <nav>
+          <div id="Tabs" class="tabs">
+            ${tabs}
+          </div>
+        </nav>
+        <div class="contents">
+            ${contents}
+        </div>
       </div>
-    </nav>
-    <div class="contents">
-        ${contents}
     </div>
   `
   let TabsHTML = '', ContentsHTML = '';
@@ -137,9 +142,8 @@ const setExperience = () => {
     `
   })
 
-  experience.querySelector('#ExperienceTabs')
-  .innerHTML = Container(TabsHTML, ContentsHTML)
-
+  experience.innerHTML = Container(TabsHTML, ContentsHTML)
+  NavMenu.querySelector('a[href="#experience"]').style.display = 'flex'
   initExperienceTabs()
 }
 
@@ -201,7 +205,7 @@ const setProjects = () => {
     ProjectsHTML += projectHTML(project)
   })
   projects.innerHTML = Container(ProjectsHTML)
-
+  NavMenu.querySelector('a[href="#projects"]').style.display = 'flex'
   svg('IconLink', icon.Link)
 }
 

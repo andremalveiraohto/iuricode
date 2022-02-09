@@ -1,20 +1,21 @@
 /** BACKGROUND*/
 section#experience {
   background: var(--bg-primary);
-  height: 35.31rem;
+  height: auto;
   display: flex;
   overflow: hidden;
   transition: ease var(--change-theme-delay);
 }
 @media (max-width: 720px) {
   section#experience {
-    height: 100vh;
+    height: auto;
   }
 }
 
 /** CONTAINER*/
 section#experience > .container{
   height: 22.93rem;
+  padding: 6.18rem 0;
 }
 @media (max-width: 720px) {
   section#experience > .container{

@@ -25,6 +25,7 @@ section#about > .container {
 @media (max-width: 1280px) {
   section#about > .container {
     column-gap: 10%;
+    padding: 6.18rem 4rem;
   }
 }
 @media (max-width: 880px) {
@@ -42,7 +43,17 @@ section#about > .container {
     height: 85vh;
     row-gap: 2rem;
   }
+  
 }
+section#about > .container .card {
+  min-width: 22.93rem;
+}
+@media (max-width: 720px) {
+  section#about > .container .card {
+    min-width: 16.93rem;
+  }
+}
+
 /*? ABOUT-ME*/
 section#about > .container .about-me {
   height: 100%;
@@ -53,7 +64,7 @@ section#about > .container .about-me {
 @media (max-width: 720px) {
   section#about > .container .about-me {
     justify-content: initial;
-    row-gap: 2rem;
+    row-gap: 1rem;
   }
 }
 section#about > .container .about-me h2 {
@@ -61,6 +72,7 @@ section#about > .container .about-me h2 {
 }
 section#about > .container .about-me .text h3 {
   font-weight: 500;
+  margin-bottom: 0.5rem;
 }
 section#about > .container .about-me .text p {
   font-size: 1.1rem;
