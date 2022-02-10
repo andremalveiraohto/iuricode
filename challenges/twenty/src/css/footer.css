@@ -1,6 +1,5 @@
 /** BACKGROUND*/
 section#footer {
-  background: var(--bg-primary);
   height: 6.25rem;
   transition: ease var(--change-theme-delay);
 }

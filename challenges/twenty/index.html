@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="src/css/about.css">
   <link rel="stylesheet" href="src/css/experience.css">
   <link rel="stylesheet" href="src/css/projects.css">
+  <link rel="stylesheet" href="src/css/contact.css">
   <link rel="stylesheet" href="src/css/footer.css">
 </head>
 <body>
@@ -20,19 +21,21 @@
     <section id="home">
       <header id="Header">
         <div class="container">
-          <h3>Portfolio </h3>
+          <h3>
+            <div id="IconList" size="20"></div>
+            Portfolio 
+          </h3>
           <nav id="NavMenu">
             <a style="display: none;" href="#home">Home</a>
             <a style="display: none;" href="#about">About me</a>
             <a style="display: none;" href="#experience">Experience</a>
             <a style="display: none;" href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
           </nav>
           <div  class="toggle-theme">
             <div id="toggleThemeText" class="text-theme">Light</div>
             <div id="toggleTheme" class="toggle"></div>
           </div>
-          <div id="IconList" size="20"></div>
-          
         </div>
       </header>
       <div id="main" class="container">
@@ -49,6 +52,28 @@
 
     <!--- PROJECTS -->
     <section id="projects"></section>
+
+    <!--- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div></div>
+        <div class="divide">
+        <h2>Contact</h2>
+          <form id="ContactForm" autocomplete="off">
+            <input required type="text" name="name" id="" placeholder="Name">
+            <input required type="email" name="email" id="" placeholder="E-mail">
+            <textarea name="message" id="" style="min-height: 4rem;" placeholder="Message"></textarea>
+            <div>
+              <div class="btns disabled">
+                <div class="form-btn submit">Send</div>
+                <div class="form-btn cancel">Cancel</div>
+              </div>
+              <div class="warning"></div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
 
     <!--- FOOTER -->
     <section id="footer">

@@ -1,6 +1,5 @@
 /** BACKGROUND*/
 section#experience {
-  background: var(--bg-primary);
   height: auto;
   display: flex;
   overflow: hidden;

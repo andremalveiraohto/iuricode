@@ -1,6 +1,5 @@
 /** BACKGROUND*/
 section#projects {
-  background: var(--bg-second);
   display: flex;
   transition: ease var(--change-theme-delay);
   height: auto;
@@ -92,10 +91,11 @@ section#projects .projects .project .info .langs span {
   justify-content: center;
   padding: 0.1rem 0.7rem;
   border-radius: 25rem;
+  transition: ease var(--change-theme-delay);
   background-color: var(--bg-primary);
   font-size: 0.75rem;
   color: var(--cyan);
-  box-shadow: 0px 0px 0px 1px #333;
+  box-shadow: 0px 0px 0px 1px var(--border);
   column-gap: 0.3rem;
   user-select: none;
 }

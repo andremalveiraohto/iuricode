@@ -29,7 +29,6 @@ const setHead = () => {
   document.head.append(metaImage)
 }
 
-
 //HOME
 const setHome = () => {
   let Container = () => `
@@ -101,15 +100,19 @@ const setAbout = () => {
       </div>
     </div>
   `
-  about.innerHTML = Container()
-  NavMenu.querySelector('a[href="#about"]').style.display = 'flex'
-  svg('IconEmail', icon.Email)
-  svg('IconDownload', icon.Download)
-  svg('IconYoutube', icon.Youtube)
-  svg('IconFacebook', icon.Facebook)
-  svg('IconCodePen', icon.CodePen)
-}
+  if(ABOUT){
+    about.innerHTML = Container()
+    NavMenu.querySelector('a[href="#about"]').style.display = 'flex'
+    svg('IconEmail', icon.Email)
+    svg('IconDownload', icon.Download)
+    svg('IconYoutube', icon.Youtube)
+    svg('IconFacebook', icon.Facebook)
+    svg('IconCodePen', icon.CodePen)
+  } else {
+    about.setAttribute('data','not-found')
+  }
 
+}
 
 //EXPERIENCE
 const setExperience = () => {
@@ -142,11 +145,14 @@ const setExperience = () => {
     `
   })
 
-  experience.innerHTML = Container(TabsHTML, ContentsHTML)
-  NavMenu.querySelector('a[href="#experience"]').style.display = 'flex'
-  initExperienceTabs()
+  if(EXPERIENCES){
+    experience.innerHTML = Container(TabsHTML, ContentsHTML)
+    NavMenu.querySelector('a[href="#experience"]').style.display = 'flex'
+    initExperienceTabs()
+  } else {
+    experience.setAttribute('data','not-found')
+  }
 }
-
 
 //PROJECTS
 const setProjects = () => {
@@ -200,25 +206,30 @@ const setProjects = () => {
     </div>
   `}
 
-  let ProjectsHTML = '';
-  PROJECTS.forEach(project => {
-    ProjectsHTML += projectHTML(project)
-  })
-  projects.innerHTML = Container(ProjectsHTML)
-  NavMenu.querySelector('a[href="#projects"]').style.display = 'flex'
-  svg('IconLink', icon.Link)
+  if(PROJECTS){
+    let ProjectsHTML = '';
+    PROJECTS.forEach(project => {
+      ProjectsHTML += projectHTML(project)
+    })
+    projects.innerHTML = Container(ProjectsHTML)
+    NavMenu.querySelector('a[href="#projects"]').style.display = 'flex'
+    svg('IconLink', icon.Link)
+  } else {
+    projects.setAttribute('data','not-found')
+  }
 }
 
-
 //FOOTER
-footer.querySelector('.left span').innerText = user.name
+footer
+.querySelector('.left span')
+.innerHTML = `<a target="_blank"href="${user.socials.github}">${user.name}</a>`
 
 
 //verification and data entry 
 HOME && ABOUT && setHead()
 HOME && setHome()
-ABOUT && setAbout()
-EXPERIENCES && setExperience()
-PROJECTS && setProjects()
+setAbout()
+setExperience()
+setProjects()
 
 

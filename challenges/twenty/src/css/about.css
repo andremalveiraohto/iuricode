@@ -1,6 +1,5 @@
 /** BACKGROUND*/
 section#about {
-  background: var(--bg-second);
   height: auto;
   transition: ease var(--change-theme-delay);
 }

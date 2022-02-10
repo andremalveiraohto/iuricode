@@ -22,8 +22,6 @@ const svg = (element, path) => {
       e.innerHTML = svghtml(e)
     });
   }
-
-
   if(elementById && elementById.attributes?.href){elementById.addEventListener('click', () => window.open(elementById.attributes?.href?.value))}
 }
 
@@ -36,13 +34,12 @@ const icon = {
   "Youtube":`<path fill="none" stroke="currentColor" stroke-width="" stroke-linecap="round" stroke-linejoin="round" d="M15.1,4.1c-0.1-0.3-0.2-0.6-0.5-0.9c-0.2-0.2-0.5-0.4-0.8-0.5C12.7,2.5,8,2.5,8,2.5s-4.7,0-5.8,0.3C1.9,2.9,1.6,3.1,1.3,3.3C1.1,3.5,0.9,3.8,0.9,4.2C0.6,5.3,0.5,6.5,0.5,7.7c0,1.2,0.1,2.4,0.3,3.6c0.1,0.3,0.3,0.6,0.5,0.8c0.2,0.2,0.5,0.4,0.8,0.5C3.3,13,8,13,8,13s4.7,0,5.8-0.3c0.3-0.1,0.6-0.3,0.8-0.5c0.2-0.2,0.4-0.5,0.5-0.9c0.2-1.2,0.3-2.4,0.3-3.6C15.5,6.5,15.4,5.3,15.1,4.1L15.1,4.1z"/><path fill="none" stroke="currentColor" stroke-width="" stroke-linecap="round" stroke-linejoin="round" d="M6.5,10l4-2.2l-4-2.2V10z"/>`,
   "Facebook":`<path fill="none" stroke="currentColor" stroke-width="" stroke-linecap="round" stroke-linejoin="round" d="M12,0.8H9.8c-1,0-1.9,0.4-2.5,1.1C6.6,2.5,6.2,3.5,6.2,4.4v2.2H4.1v2.9h2.2v5.7h2.9V9.4h2.2L12,6.6H9.1V4.4c0-0.2,0.1-0.4,0.2-0.5c0.1-0.1,0.3-0.2,0.5-0.2H12V0.8z"/>`,
   "CodePen":`<path fill="none" stroke="currentColor" stroke-width="" stroke-linecap="round" stroke-linejoin="round" d="M8,0.7l7.3,4.7v5.1L8,15.3l-7.3-4.7V5.4L8,0.7z"/><path fill="none" stroke="currentColor" stroke-width="" stroke-linecap="round" stroke-linejoin="round" d="M8,15.3v-4.7"/><path fill="none" stroke="currentColor" stroke-width="" stroke-linecap="round" stroke-linejoin="round" d="M15.3,5.4L8,10.6L0.7,5.4"/><path fill="none" stroke="currentColor" stroke-width="" stroke-linecap="round" stroke-linejoin="round" d="M0.7,10.6L8,5.4l7.3,5.1"/><path fill="none" stroke="currentColor" stroke-width="" stroke-linecap="round" stroke-linejoin="round" d="M8,0.7v4.7"/>`,
-  "YinYang":`<path d="M9.167 4.5a1.167 1.167 0 1 1-2.334 0 1.167 1.167 0 0 1 2.334 0Z"/><path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0ZM1 8a7 7 0 0 1 7-7 3.5 3.5 0 1 1 0 7 3.5 3.5 0 1 0 0 7 7 7 0 0 1-7-7Zm7 4.667a1.167 1.167 0 1 1 0-2.334 1.167 1.167 0 0 1 0 2.334Z"/>`,
-  "Link":`<path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/><path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>`
+  "Link":`<path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/><path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>`,
+  "ArrowLeft":`<path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>`
 }
-
 
 svg('IconList', icon.List)
 
-svg('IconYinYang', icon.YinYang)
+
 
 

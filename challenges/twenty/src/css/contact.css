@@ -1,0 +1,158 @@
+/** BACKGROUND*/
+section#contact {
+  position: relative;
+  height: auto;
+  transition: ease var(--change-theme-delay);
+  background-image: url('../images/bg2.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+section#contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-on-bg-image);
+  transition: ease var(--change-theme-delay);
+}
+@media (max-width: 720px) {
+  section#contact {
+    height: auto;
+  }
+}
+
+/** CONTAINER*/
+section#contact  {
+  display: flex;
+  --height: 22.93rem;
+}
+
+section#contact > .container {
+  padding: 6rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+}
+@media (max-width: 1280px) {
+  section#contact > .container {
+    padding: 6rem 4rem;
+  }
+}
+@media (max-width: 720px) {
+  section#contact > .container {
+    padding: 6rem 2rem;
+    display: flex;
+    width: 100%;
+  }
+}
+section#contact > .container h2 {
+  text-transform: uppercase;
+}
+
+section#contact > .container .divide {
+  row-gap: 3.75rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin-left: -2rem;
+  border-radius: 0.5rem;
+  background:  var(--bg-on-bg-image);
+  backdrop-filter: blur(1.5rem);
+  transition: ease var(--change-theme-delay);
+}
+@media (max-width: 720px) {
+  section#contact > .container .divide {
+    margin-left: 0rem;
+    width: 100%;
+  }
+}
+/** FORM*/
+section#contact > .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+section#contact > .container form :is(input, textarea) {
+  box-shadow: 0px 0px 0px 2px var(--border);
+  transition: ease var(--change-theme-delay);
+  color: var(--cyan);
+  font-weight: 400;
+}
+section#contact > .container form :is(input, textarea)::placeholder {
+  color: var(--font-second);
+}
+section#contact > .container form :is(input, textarea):focus {
+  box-shadow: 0px 0px 0px 2px var(--purple);
+}
+
+section#contact > .container form .btns {
+  justify-content: flex-end;
+  transition: ease 0.2s;
+  opacity: 1;
+}
+@media (max-width: 720px) {
+  section#contact > .container form .btns {
+    justify-content: center;
+  }
+}
+section#contact > .container form .btns.disabled {
+  visibility: hidden;
+  opacity: 0;
+}
+section#contact > .container form .btns .form-btn {
+  width: 6rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.4rem;
+  color: #ececec;
+  transition: ease 0.2s;
+  font-size: 1.1rem;
+}
+@media (max-width: 720px) {
+  section#contact > .container form .btns .form-btn {
+    flex: 1;
+  }
+}
+section#contact > .container form .btns .form-btn:hover {
+  box-shadow: 0px 0px 0px 2px var(--purple);
+}
+section#contact > .container form .btns .form-btn .spinner .path {
+  stroke: #ececec;
+}
+section#contact > .container form .btns .form-btn .spinner {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+section#contact > .container form .btns .form-btn:active {
+  transform: scale(0.9);
+}
+section#contact > .container form .btns .form-btn.submit {
+  background: var(--purple);
+}
+section#contact > .container form .btns .form-btn.cancel {
+  box-shadow: 0px 0px 0px 2px var(--border);
+}
+section#contact > .container form .btns .form-btn.cancel:hover {
+  box-shadow: 0px 0px 0px 2px var(--purple);
+}
+
+section#contact > .container form .warning {
+  display: flex;
+  justify-content: flex-end;
+  height: 1.5rem;
+  align-items: center;
+}
+@media (max-width: 720px) {
+  section#contact > .container form .warning {
+    justify-content: center;
+  }
+}
+section#contact > .container form .warning.success {
+  color: var(--purple);
+}
+section#contact > .container form .warning.error {
+  color: var(--pink);
+}
