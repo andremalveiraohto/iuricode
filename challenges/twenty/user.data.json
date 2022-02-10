@@ -15,7 +15,24 @@
     "curriculum": null
   }, 
   "experiences": [
-    
+    {
+      "role":"Full Stack Developer",
+      "company":"DEEV",
+      "description":"Development of a complete profile application with dashboard - (under development) ",
+      "date":"JAN 2021"
+    },
+    {
+      "role":"Back End Developer",
+      "company":"API in PHP",
+      "description":"Development of an API in PHP using MVC framework and using Auth JWT and deploy on Vercel.",
+      "date":"DEC 2021"
+    },
+    {
+      "role":"Full Stack Developer",
+      "company":"AstLib.js",
+      "description":"Development of a javascript library and a browser extension for personal use in projects.",
+      "date":"NOV 2021"
+    }
   ],
   "projects":[
     {
