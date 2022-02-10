@@ -25,8 +25,8 @@ const setHead = () => {
 
   document.head.append(title)
   document.head.append(favicon)
-  document.head.append(metaDescription)
-  document.head.append(metaImage)
+/*   document.head.append(metaDescription)
+  document.head.append(metaImage) */
 }
 
 //HOME

@@ -15,8 +15,6 @@ window.addEventListener('load', () => {
 })
 
 
-
-
 //set BACKGROUND-COLOR
 window.addEventListener('load', () => {
   document.querySelectorAll('section[id]:not([data="not-found"])').forEach((e, key)=> {
@@ -29,8 +27,6 @@ window.addEventListener('load', () => {
 })
 
 
-
-
 //HEADER Scroll Fixed
 document.addEventListener('scroll', e => {
   if(window.scrollY > 80) {
@@ -39,8 +35,6 @@ document.addEventListener('scroll', e => {
     Header.classList.remove('fixed')
   }
 })
-
-
 
 
 //THEME Toggle
@@ -70,8 +64,6 @@ toggleTheme.addEventListener('click', () => {
 })
 
 
-
-
 //MENU Mobile
 let menuVisible = false
 IconList.addEventListener('click', () => {
@@ -83,8 +75,6 @@ IconList.addEventListener('click', () => {
     menuVisible = false
   }
 })
-
-
 
 
 //Experience TABS
@@ -115,8 +105,6 @@ const initExperienceTabs = () => {
     })
   })
 }
-
-
 
 //CONTACT Form
 ContactForm.message.addEventListener('input', () => {
@@ -191,8 +179,6 @@ const sendForm = () => {
     warning.success('Message sent successfully')
   }, 500);
 }
-
-
 
 //BTN ALL-PROJECTS
 document.body.insertAdjacentHTML('beforeend', `
